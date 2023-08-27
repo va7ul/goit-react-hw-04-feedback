@@ -6,7 +6,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <List>
       {options.map(option => (
         <li key={nanoid()}>
-          <button onClick={() => onLeaveFeedback({ option })}>{option}</button>
+          <button onClick={e => onLeaveFeedback(e.target.textContent)}>
+            {option}
+          </button>
         </li>
       ))}
     </List>

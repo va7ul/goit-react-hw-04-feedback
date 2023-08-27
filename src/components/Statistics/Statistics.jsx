@@ -1,13 +1,18 @@
 import { nanoid } from 'nanoid';
 
-export const Statistics = ({ options, clicks, total, positivePercentage }) => {
+export const Statistics = ({
+  options,
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => {
   return (
     <ul>
-      {options.map(option => (
-        <li key={nanoid()}>
-          {option}:{clicks[option]}
-        </li>
-      ))}
+      <li key={nanoid()}>Good:{good}</li>
+      <li key={nanoid()}>Neutral:{neutral}</li>
+      <li key={nanoid()}>Bad:{bad}</li>
       <li key={nanoid()}>Total:{total}</li>
       <li key={nanoid()}>Positive feedback:{positivePercentage}%</li>
     </ul>
