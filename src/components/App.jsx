@@ -16,20 +16,14 @@ export const App = () => {
     switch (event) {
       case 'good':
         setGood(prevState => prevState + 1);
-        console.log(good);
-
         break;
       case 'neutral':
         setNeutral(prevState => prevState + 1);
-        console.log(neutral);
-
         break;
       case 'bad':
         setBad(prevState => prevState + 1);
-        console.log(bad);
-
         break;
-
+      
       default:
         return;
     }
